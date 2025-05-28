@@ -8,7 +8,6 @@ mydb = mysql.connector.connect(
     database="Animali"  #Seleziona il database Animali
 )
 mycursor = mydb.cursor()
-mycursor.execute("USE Animali")
 
 def chiedi_integro(prompt):
     while True:
@@ -19,7 +18,7 @@ def chiedi_integro(prompt):
         except ValueError:
             print("Errore: per favore inserisci un numero intero valido.")
 
-for _ in range(1):  #Ripeti per 5 volte
+for _ in range(5):  #Ripeti per 5 volte
         print("\nInserisci i dettagli per un nuovo animale:")
 
         # Chiedi all'utente di inserire i dati per ogni animale
@@ -35,6 +34,6 @@ for _ in range(1):  #Ripeti per 5 volte
             VALUES (%s, %s, %s, %s)
         """, (nome_proprio, razza, peso, eta))
 
-
+mydb.commit()
 mycursor.close()
 mydb.close()

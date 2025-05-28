@@ -1,17 +1,15 @@
 import mysql.connector
 
-# Connect to the MySQL database
+#Connessione al database MySQL
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
     password="",
-    database = "Animali"
+    database="Animali"  #Seleziona il database Animali
 )
-
 mycursor = mydb.cursor()
 
-#select
-mycursor.execute("SELECT * FROM Mammiferi")
+mycursor.execute("SELECT * FROM Mammiferi WHERE peso > 20")
 
 #STAMPA
 for x in mycursor:
