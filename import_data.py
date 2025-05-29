@@ -50,6 +50,5 @@ for i,row in clash_data.iterrows():
 #Check if the table has been filled
 mycursor.execute("SELECT * FROM CLASH_ROYALE.Clash_Unit")
 myresult = mycursor.fetchall()
-print(type(myresult))
 for x in myresult:
   print(x)
