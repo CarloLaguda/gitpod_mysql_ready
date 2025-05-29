@@ -1,4 +1,4 @@
-flask
-pandas
-mysql-connector-python
-flask-cors
+pip install flask
+pip install pandas
+pip install mysql-connector-python
+pip install flask-cors
