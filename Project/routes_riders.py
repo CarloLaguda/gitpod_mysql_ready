@@ -51,7 +51,7 @@ def mostPole(numero):
     if not mydb or not mycursor:
         return jsonify({"error": "Connessione al database non stabilita"}), 500
     try:
-        mycursor.execute("SELECT Driver,Pole_Positions, Nationality FROM RIDERS.motogp WHERE Pole_Positions >= %s ORDER BY Pole_Positions DESC;", (numero,))
+        mycursor.execute("SELECT * FROM RIDERS.motogp WHERE Pole_Positions >= %s ORDER BY Pole_Positions DESC;", (numero,))
         myresult = mycursor.fetchall()
         column_names = [desc[0] for desc in mycursor.description]
         result = []
@@ -68,7 +68,7 @@ def mostWin(numero):
     if not mydb or not mycursor:
         return jsonify({"error": "Connessione al database non stabilita"}), 500
     try:
-        mycursor.execute("SELECT Driver,Victories, Nationality FROM RIDERS.motogp WHERE Victories >= %s ORDER BY Victories DESC;", (numero,))
+        mycursor.execute("SELECT * FROM RIDERS.motogp WHERE Victories >= %s ORDER BY Victories DESC;", (numero,))
         myresult = mycursor.fetchall()
         column_names = [desc[0] for desc in mycursor.description]
         result = []
@@ -85,7 +85,7 @@ def mostWin_Champio(numero):
     if not mydb or not mycursor:
         return jsonify({"error": "Connessione al database non stabilita"}), 500
     try:
-        mycursor.execute("SELECT Driver,World_Championships, Nationality FROM RIDERS.motogp WHERE World_Championships >= %s ORDER BY World_Championships DESC;", (numero,))
+        mycursor.execute("SELECT * FROM RIDERS.motogp WHERE World_Championships >= %s ORDER BY World_Championships DESC;", (numero,))
         myresult = mycursor.fetchall()
         column_names = [desc[0] for desc in mycursor.description]
         result = []
