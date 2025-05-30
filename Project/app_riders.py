@@ -1,6 +1,5 @@
 import mysql.connector
 import pandas as pd
-import numpy as np
 
 # Connect to MySQL database
 mydb = mysql.connector.connect(
