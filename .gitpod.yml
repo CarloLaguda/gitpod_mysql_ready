@@ -3,10 +3,8 @@ image:
 tasks:
     - init: |
           pip install -r requirements.txt
-          npm i -g@angular/cli
           cd Project
-          python app_riders.py
-          cd Riders_Hub
-          npm install
+        
+        
           
     
