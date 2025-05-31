@@ -5,6 +5,7 @@ tasks:
       pip install -r requirements.txt
       cd Project
       python app_riders.py
+      python routes_riders.py
         
         
           
