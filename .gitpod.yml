@@ -1,11 +1,10 @@
 image:
   file: .gitpod.dockerfile
 tasks:
-    - init: |
-          pip install -r requirements.txt
-          cd Project
-    - command: |
-          python app_riders.py
+  - command: |
+      pip install -r requirements.txt
+      cd Project
+      python app_riders.py
         
         
           
